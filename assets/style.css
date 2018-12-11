@@ -6,20 +6,21 @@
   Let's go through the important bits real quick
 */
 :root {
-  --yellow: #ffc600;
-  --black: #272727;
+  --yellow: #e8c914;
+  --orange: #f46524;
+  --blue: #0099e8;
+  --black: #22242e;
+  --grey: #5d6382;
 }
 
 html {
   /* border-box box model allows us to add padding and border to our elements without increasing their size */
   box-sizing: border-box;
   /* A system font stack so things load nice and quick! */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Open Sans', "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 900;
   font-size: 10px;
-  color: var(--black);
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  color: var(--yellow);
 }
 
 /*
@@ -34,13 +35,11 @@ html {
 }
 
 body {
-  background-image: url("./images/topography.svg"),
-    linear-gradient(110deg, #f93d66, #6d47d9);
-  background-size: 340px, auto;
+  background: var(--black);
+  color: var(--yellow);
   min-height: calc(100vh - 100px);
   margin: 50px;
   /* background: white; */
-  background-attachment: fixed;
   letter-spacing: -1px;
 }
 
@@ -52,16 +51,22 @@ h5,
 h6 {
   margin: 0 0 5px 0;
 }
+
+h1 {
+  font-size: 50px;
+  color: var(--yellow);
+  margin-bottom: 2rem;
+}
+
 /* Each item in our grid will contain numbers */
 .item {
   /* We center the contents of these items. You can also do this with flexbox too! */
   display: grid;
   justify-content: center;
   align-items: center;
-  border: 5px solid rgba(0, 0, 0, 0.03);
-  border-radius: 3px;
-  font-size: 35px;
-  background-color: var(--yellow); /* best colour */
+  border: 4px solid rgba(0, 0, 0, 0.03);
+  font-size: 36px;
+  background-color: var(--grey);
 }
 
 .item p {
